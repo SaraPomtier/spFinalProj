@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monsteras 💚!</title>
+  </head>
+  <style>
+    html {
+      height: 100%;
+    }
+    body {
+      height: auto;
+      margin: 60px auto;
+      width: 50%;
+      background: linear-gradient(
+        to bottom,
+        rgba(35, 56, 37, 1) 25%,
+        rgba(58, 89, 50, 1) 45%,
+        rgba(241, 237, 219, 1) 100%
+      );
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    h1 {
+      font-size: 60px;
+      color: #f1eddb;
+      margin: 10px 0 10px 0px;
+    }
+
+    h2 {
+      font-size: 45px;
+      color: #e7a2a2;
+      margin: 30px 20px 20px 20px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-top: 5px;
+      margin-left: 50px;
+      margin-right: 50px;
+      margin-bottom: 10px;
+      color: rgba(241, 237, 219, 1);
+      line-height: 1.25;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 90%;
+      border: 13px solid #e7a2a2;
+      border-style: dotted;
+    }
+
+    button {
+      background-color: #f1eddb;
+      color: #e7a2a2;
+      font-size: 35px;
+      margin-top: 50px;
+      border-radius: 13px;
+      border-color: #3a5932;
+      padding: 15px;
+      box-shadow: 5px 5px 5px #a9a9aa;
+      transition: all 350ms ease-in-out;
+    }
+    button:hover {
+      background-color: #e7a2a2;
+      color: #f1eddb;
+    }
+
+    a {
+      color: #3a5932;
+      font-size: 23px;
+      text-decoration: none;
+    }
+
+    .wrap-page {
+      text-align: center;
+      margin: auto 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .begPara {
+      color: #e7a2a2;
+    }
+    .coder {
+      font-weight: bold;
+      color: rgba(58, 89, 50, 1);
+    }
+    .coder:hover {
+      text-decoration: underline;
+    }
+
+    .learnMore:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <body>
+    <div class="wrap-page">
+      <h1>Monsteras Are the Best Plant!</h1>
+
+      <h2>
+        I <em>highly</em> recommend <br />
+        them to anyone
+      </h2>
+
+      <img
+        src="https://c0.wallpaperflare.com/preview/520/920/885/united-states-nashville-gaylord-opryland-resort-and-spa-houseplants.jpg"
+        alt="A large, dark-leafed monstera deliciosa"
+        height="500px"
+      />
+      <br />
+
+      <p>
+        <span class="begPara"><strong>Monstera Deliciosas</strong></span> are my
+        favorite plants ever! I love them due to they're easy-to-maintain nature
+        and general sturdiness. Depending on where you live, they can be grown
+        indoors or out and can withlast going weeks without water! A lot of my
+        family members don't have green thumbs and even they're able to care for
+        these giant, beautiful plants. Please think about joining my Monstera
+        Fan Club!
+      </p>
+
+      <a
+        href="https://en.wikipedia.org/wiki/Monstera_deliciosa"
+        target="_blank"
+        class="learnMore"
+      >
+        More Monstera Material
+      </a>
+      <br />
+      <button>Monstera Fan Club</button>
+      <div>
+        Website made by
+        <a
+          href="https://www.linkedin.com/in/sara-pomtier-4a76b8251/"
+          target="_blank"
+          ><span class="coder">Sara Pomtier</span></a
+        >
+      </div>
+      <script>
+        function joinClub() {
+          let name = prompt("what's your name?");
+          alert("Thanks for checking out the site " + name + "!");
+
+          let interest = prompt("Would you like to join the Monstera Fanclub?");
+
+          interest = interest.toLowerCase().trim();
+
+          let h2 = document.querySelector("h2");
+
+          if (
+            interest === "yes" ||
+            interest === "yeah" ||
+            interest === "ya" ||
+            interest === "absolutely"
+          ) {
+            h2.innerHTML =
+              "Yay! We'll be in touch with you soon, " + name + ".";
+          } else {
+            h2.innerHTML =
+              ":( that's so sad, " +
+              name +
+              "... Come back if you change your mind!";
+          }
+        }
+
+        let clubButton = document.querySelector("button");
+
+        clubButton.addEventListener("click", joinClub);
+      </script>
+    </div>
+  </body>
+</html>
